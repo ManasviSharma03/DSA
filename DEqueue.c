@@ -7,6 +7,8 @@ void fenqueue();
 void fdequeue();
 void renqueue();
 void rdequeue();
+void display();
+
 int main()
 {
     int choice;
@@ -14,7 +16,7 @@ int main()
     while (1)
     {
         printf("\nPerform operations on the stack:");
-        printf("\n1.Enqueue\n2.Dequeue\n3.Display\n4.Exit");
+        printf("\n1.Front Enqueue\n2.Front Dequeue\n3.Rear Enqueue\n4.Rear Dequeue\n5.Display\n6.Exit");
         printf("\n\nEnter the choice: ");
         scanf("%d", &choice);
         
@@ -33,11 +35,14 @@ int main()
             rdequeue();
             break;
         case 5:
-            exit(0);
+            display();
+            break;
+        case 6:
+            return 0;
         default:
             printf("\nInvalid choice!!");
-        }
-    }
+        }
+    }
     
 }
 
